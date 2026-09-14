@@ -46,11 +46,11 @@ return {
     ----------------------------------------------------------------
     -- BATTLEAXE
     ----------------------------------------------------------------
-    ["5064195992"]  = 0.2,  -- LightAttack 1
-    ["5067105317"]  = 0.2,  -- LightAttack 2
-    ["5067090007"]  = 0.4,  -- LightAttack 3
-    ["7388133473"]  = 0.5,  -- Critical
-    ["11363599835"] = 0.5,  -- Aerial LightAttack
+    ["5064195992"]  = 0.2,   -- LightAttack 1
+    ["5067105317"]  = 0.2,   -- LightAttack 2
+    ["5067090007"]  = 0.4,   -- LightAttack 3
+    ["7388133473"]  = 0.5,   -- Critical
+    ["11363599835"] = 0.5,   -- Aerial LightAttack
 
     ----------------------------------------------------------------
     -- STILETTO
@@ -65,80 +65,106 @@ return {
     ----------------------------------------------------------------
     -- NPCS
     ----------------------------------------------------------------
+
     -- Sharko
     ["5121733951"] = {0.10, 0.30}, -- Double Swipe
-    ["5117879514"] = 0.1,  -- Single Swipe
-    ["11710290503"] = 0.15,  -- Kick
+    ["5117879514"] = 0.1,          -- Single Swipe
+    ["11710290503"] = 0.15,        -- Kick
+
     -- Golem
-    ["0"] = 0,  -- Uppercut
-    ["0"] = 0,  -- Downslam
-    ["0"] = 0,  -- Beam
-    ["0"] = {type="jump",   t=0}, -- stomp
+    -- Add real animation IDs here when available.
+    -- ["ANIMATION_ID"] = 0, -- Uppercut
+    -- ["ANIMATION_ID"] = 0, -- Downslam
+    -- ["ANIMATION_ID"] = 0, -- Beam
+    -- ["ANIMATION_ID"] = {type="jump", t=0}, -- Stomp
+
     -- Thresher
-    ["822787518"] = 0.6,  -- Tail Swipe
-    ["8227583745"] = {0.4, 0.7},  -- Double Slash
+    ["822787518"]  = 0.6,             -- Tail Swipe
+    ["8227583745"] = {0.4, 0.7},      -- Double Slash
     ["8226933122"] = {0.5, 1, 1.4},  -- Triple Bite
+
     -- Angels
+    -- Add animation IDs here.
 
     -- Stone Knight
-    ["0"] = 0,  -- First Swing
-    ["0"] = 0,  -- Second Swing
-    ["0"] = 0,  -- Kick
-    ["0"] = 0,  -- Pillar
-    ["0"] = 0,  -- Slash
+    -- Add real animation IDs here when available.
+    -- ["ANIMATION_ID"] = 0, -- First Swing
+    -- ["ANIMATION_ID"] = 0, -- Second Swing
+    -- ["ANIMATION_ID"] = 0, -- Kick
+    -- ["ANIMATION_ID"] = 0, -- Pillar
+    -- ["ANIMATION_ID"] = 0, -- Slash
 
-    
-    -- Enforcer
-    ["7019686291"] = 0.15,  -- Kick
-    ["7018046790"] = 0.25,  -- M1
-    ["7018083796"] = 0.25,  -- M2
- -- ["7019018522"] = 0.6,  -- Spin  (disabled)
- -- ["7271659917"] = 0.6,  -- Pull  (disabled)
+    ----------------------------------------------------------------
+    -- ENFORCER
+    ----------------------------------------------------------------
+    ["7019686291"] = 0.15, -- Kick
+    ["7018046790"] = 0.25, -- M1
+    ["7018083796"] = 0.25, -- M2
+    -- ["7019018522"] = 0.6, -- Spin (disabled)
+    -- ["7271659917"] = 0.6, -- Pull (disabled)
 
-    -- Primadon
-    ["9225098544"] = 0.6,                     -- Stomp (single)
-    ["6432260013"] = {0.10, 0.50, 0.90},      -- Stomp (3-hit)
+    ----------------------------------------------------------------
+    -- PRIMADON
+    ----------------------------------------------------------------
+    ["9225098544"] = 0.6,                -- Stomp (single)
+    ["6432260013"] = {0.10, 0.50, 0.90}, -- Stomp (3-hit)
 
     ----------------------------------------------------------------
     -- VOW OF IRON — SHOGUN
     ----------------------------------------------------------------
 
     -- Parry animations
-    ["118154222392812"] = {type="parry", t={0.7, 1.5}},    -- Double Slash
-    ["86527092652774"]  = 0.6,                               -- Single Diagonal Slash
-    ["134600514326413"] = {type="parry", t={0.7, 1.2}},    -- Stomp into Slash
+    ["118154222392812"] = {
+        type = "parry",
+        t = {0.7, 1.5}
+    }, -- Double Slash
 
-    -- Dodge animations (unparryable — press Q, or F with Parry Unparryables on)
-    ["124963391435150"] = {type="dodge", t={0.5, 1.0}},    -- Red Double Slash
+    ["86527092652774"] = 0.6, -- Single Diagonal Slash
 
-    -- Crouch animation (auto-crouches under this move)
-    -- Note: this is the SAME id as the dodge above — the system handles
-    -- both actions if you put them in a sequence entry below instead.
-    -- ["124963391435150"] = {type="crouch", t=0.3},       -- Low Slash (example)
+    ["134600514326413"] = {
+        type = "parry",
+        t = {0.7, 1.2}
+    }, -- Stomp into Slash
 
-    -- Hybrid / sequence — jump + parry in one animation
-    ["112423929319383"] = {    -- Jump Stomps with Slashes
-        {type="jump",  t=0.4},
-        {type="parry", t=0.9},
-        {type="parry", t=1.1},
-        {type="jump",  t=1.5},
-    },
+    -- Dodge animations
+    -- Unparryable: Q normally, F with "Parry Unparryables" enabled
+    ["124963391435150"] = {
+        type = "dodge",
+        t = {0.5, 1.0}
+    }, -- Red Double Slash
 
-    ["76782656543761"] = {     -- Flurry Combo
-        {type="parry", t=0.3},
-        {type="dodge", t=0.5},
-        {type="parry", t=0.6},
-        {type="parry", t=0.8},
+    -- Crouch example
+    -- This is intentionally disabled because it uses the same
+    -- animation ID as the dodge above.
+    -- ["124963391435150"] = {
+    --     type = "crouch",
+    --     t = 0.3
+    -- },
+
+    -- Hybrid / sequence
+    -- Jump + parry in one animation
+    ["112423929319383"] = {
+        {type = "jump",  t = 0.4},
+        {type = "parry", t = 0.9},
+        {type = "parry", t = 1.1},
+        {type = "jump",  t = 1.5},
+    }, -- Jump Stomps with Slashes
+
+    -- Flurry Combo
+    ["76782656543761"] = {
+        {type = "parry", t = 0.3},
+        {type = "dodge", t = 0.5},
+        {type = "parry", t = 0.6},
+        {type = "parry", t = 0.8},
     },
 
     ----------------------------------------------------------------
     -- TEMPLATE — copy and fill in for new bosses/weapons
     ----------------------------------------------------------------
- -- ["animId"] = 0.3,            -- M1
- -- ["animId"] = 0.3,            -- M2
- -- ["animId"] = 0.3,            -- M3
- -- ["animId"] = 0.3,            -- M4
- -- ["animId"] = 0.3,            -- M5
- -- ["animId"] = 0.5,            -- Critical
-
+    -- ["animId"] = 0.3, -- M1
+    -- ["animId"] = 0.3, -- M2
+    -- ["animId"] = 0.3, -- M3
+    -- ["animId"] = 0.3, -- M4
+    -- ["animId"] = 0.3, -- M5
+    -- ["animId"] = 0.5, -- Critical
 }
