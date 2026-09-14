@@ -1,9 +1,4 @@
 --[[
-    animations.lua — AutoParry animation timing definitions
-    Host this file raw on GitHub and point ANIM_REPO_URL at it.
-
-    Supported formats per entry:
-
     Single parry:
         ["animId"] = 0.3
 
