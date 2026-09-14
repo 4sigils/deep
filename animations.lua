@@ -73,7 +73,7 @@ return {
     ["0"] = 0,  -- Uppercut
     ["0"] = 0,  -- Downslam
     ["0"] = 0,  -- Beam
-    ["0"] = {type="jump",   t=0} -- stomp
+    ["0"] = {type="jump",   t=0}, -- stomp
     -- Thresher
     ["822787518"] = 0.6,  -- Tail Swipe
     ["8227583745"] = {0.4, 0.7},  -- Double Slash
