@@ -12,14 +12,14 @@ return {
     ["138145073296964"] = { pb = true, t = 0.05 }, -- Downslam
     ["117799573414500"] = { pb = true, t = 0.05 }, -- Uptilt
 
-    ["81458066007277"] = { pb = true, t = {.1, .1} }, -- Divergent Fist
+    --["81458066007277"] = { pb = true, t = {.1, .1} }, -- Divergent Fist
 
     --["130097105243600"] = { pb = true, t = 0.05 }, -- Divergent Fist Air
     --["136537081085390"] = { pb = true, t = 0.05 }, -- Slide Kick
-    --["81458066007277"] = { pb = true, t = .1 }, --DF
+    ["81458066007277"] = { pb = true, t = .1 }, --DF
     ["90746235953469"] = { pb = true, t = 0.625 }, -- Cursed Beatdown
     --["88425052547737"] = { pb = true, t = 0.35 }, -- Cursed Beatdown Air
-    ["130956157529019"] = { pb = true, t = 0.65 }, -- Manji Kick
+    --["130956157529019"] = { pb = true, t = 0.65 }, -- Manji Kick
 
     ----------------------------------------------------------------
     -- Examples
