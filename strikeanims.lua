@@ -12,12 +12,7 @@ return {
     ["138145073296964"] = { pb = true, t = 0.05 }, -- Downslam
     ["117799573414500"] = { pb = true, t = 0.05 }, -- Uptilt
 
-        ["81458066007277"] = { -- Divergent Fist
-        pb = true,
-        pb = true,
-        t = {0.35, 0.80}
-    },
-
+    ["117799573414500"] = { pb = true, t = {0.05, 0.45} }, -- Divergent Fist
     --["130097105243600"] = { pb = true, t = 0.05 }, -- Divergent Fist Air
     --["136537081085390"] = { pb = true, t = 0.05 }, -- Slide Kick
     ["90746235953469"] = { pb = true, t = 0.2 }, -- Cursed Beatdown
