@@ -12,7 +12,7 @@ return {
     ["138145073296964"] = { pb = true, t = 0.05 }, -- Downslam
     ["117799573414500"] = { pb = true, t = 0.05 }, -- Uptilt
 
-        ["117799573414500"] = { -- Divergent Fist
+        ["81458066007277"] = { -- Divergent Fist
         pb = true,
         pb = true,
         t = {0.35, 0.80}
