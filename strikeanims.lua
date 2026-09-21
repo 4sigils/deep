@@ -1,6 +1,6 @@
 return {
     -- Yuji
-    ["rbxassetid://119657732016011"] = { name = "M1",   range = 15, pbs = {0.05} },
+    ["rbxassetid://119657732016011"] = { name = "M1",   range = 15, pbs = {0.01} },
     ["rbxassetid://102160567941101"] = { name = "M2",   range = 15, pbs = {0.05} },
     ["rbxassetid://97112862462365"] = { name = "M3",   range = 15, pbs = {0.05} },
     ["rbxassetid://114035155420354"] = { name = "M4",   range = 15, pbs = {0.05} },
