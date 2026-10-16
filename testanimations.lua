@@ -2,7 +2,7 @@
 -- number = parry | { type = "dodge", t = x } | { t1, t2, ... } = several parries
 -- Multi-hit lists were turned into absolute times.
 
-local D = {
+return {
 -- ===== Section 1: parryPoints table (roll = true became dodge) =====
 ["650507779"] = { type = "dodge", t = 0.2 },            -- Golem Scream
 ["130877926065710"] = { type = "dodge", t = 0.65 },     -- DarkDemonExplosion
@@ -270,10 +270,8 @@ local D = {
 ["17108566269"] = { type = "dodge", t = 0.6 },          -- BruteHeavyPunch
 ["16079914008"] = { type = "dodge", t = { 0.5, 0.7, 0.9, 1.1, 1.3, 1.5, 1.7 } }, -- Iceflock
 ["11710290503"] = { type = "dodge", t = 0.45 },         -- Sharko Kick
-}
 
--- ===== Section 2: hand-tuned V4 engine entries (override Section 1) =====
-local V4 = {
+-- ===== Section 2: hand-tuned V4 engine entries (come later, so they override Section 1) =====
 ["106452000190522"] = 0.6,                              -- Greatcannoncrit
 ["106858298622632"] = 0.4, ["122256431354649"] = 0.4,   -- CannonX1/X2
 ["112423929319383"] = {                                 -- ShogunTripleFang
@@ -337,6 +335,3 @@ local V4 = {
 ["9629695751"] = 0.929,                                 -- Whirlthrow
 ["9921853885"] = 0.45,                                  -- CrocoSlam
 }
-
-for id, v in pairs(V4) do D[id] = v end
-return D
